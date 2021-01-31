@@ -1,0 +1,150 @@
+2021-01-31 18:27:27
+Full thread dump OpenJDK 64-Bit Server VM (25.275-b01 mixed mode):
+
+"Attach Listener" #107 daemon prio=9 os_prio=31 tid=0x00007f80b5833800 nid=0x9a07 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Thread-93" #104 prio=5 os_prio=31 tid=0x00007f80b6077800 nid=0xdb03 runnable [0x0000700012867000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-85" #96 prio=5 os_prio=31 tid=0x00007f80b6075800 nid=0xd303 runnable [0x000070001204f000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-77" #88 prio=5 os_prio=31 tid=0x00007f80ba852800 nid=0x12e03 runnable [0x0000700011837000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-69" #80 prio=5 os_prio=31 tid=0x00007f80b6854800 nid=0xc303 runnable [0x000070001101f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.Arrays.copyOfRange(Arrays.java:3592)
+	at java.math.BigInteger.multiplyByInt(BigInteger.java:1609)
+	at java.math.BigInteger.multiply(BigInteger.java:1519)
+	at java.math.BigInteger.multiply(BigInteger.java:1493)
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:65)
+
+"Thread-61" #72 prio=5 os_prio=31 tid=0x00007f80ba0a7800 nid=0xbd03 runnable [0x0000700010807000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.Arrays.copyOfRange(Arrays.java:3592)
+	at java.math.BigInteger.multiplyByInt(BigInteger.java:1609)
+	at java.math.BigInteger.multiply(BigInteger.java:1519)
+	at java.math.BigInteger.multiply(BigInteger.java:1493)
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:65)
+
+"Thread-53" #64 prio=5 os_prio=31 tid=0x00007f80b6073000 nid=0x14503 runnable [0x000070000ffef000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.Arrays.copyOfRange(Arrays.java:3592)
+	at java.math.BigInteger.multiplyByInt(BigInteger.java:1609)
+	at java.math.BigInteger.multiply(BigInteger.java:1519)
+	at java.math.BigInteger.multiply(BigInteger.java:1493)
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:65)
+
+"Thread-45" #56 prio=5 os_prio=31 tid=0x00007f80ba84a000 nid=0x14f03 runnable [0x000070000f7d7000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-37" #48 prio=5 os_prio=31 tid=0x00007f80b707f000 nid=0x7e03 runnable [0x000070000efbf000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-29" #40 prio=5 os_prio=31 tid=0x00007f80b5826000 nid=0x8703 runnable [0x000070000e7a7000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-21" #32 prio=5 os_prio=31 tid=0x00007f80ba844800 nid=0x9403 runnable [0x000070000df8f000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-13" #24 prio=5 os_prio=31 tid=0x00007f80ba842000 nid=0x9e03 runnable [0x000070000d777000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Thread-5" #16 prio=5 os_prio=31 tid=0x00007f80b6058000 nid=0x6103 runnable [0x000070000cf5f000]
+   java.lang.Thread.State: RUNNABLE
+	at com.company.FactorialMT$MyThread.run(FactorialMT.java:64)
+
+"Service Thread" #10 daemon prio=9 os_prio=31 tid=0x00007f80b4867800 nid=0x5603 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread3" #9 daemon prio=9 os_prio=31 tid=0x00007f80b7013000 nid=0x4003 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #8 daemon prio=9 os_prio=31 tid=0x00007f80b7012000 nid=0x4103 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=31 tid=0x00007f80b7011000 nid=0x4303 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=31 tid=0x00007f80b7010000 nid=0x4403 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Ctrl-Break" #5 daemon prio=5 os_prio=31 tid=0x00007f80b7864000 nid=0x4603 runnable [0x000070000c33b000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	- locked <0x00000006c00094c8> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	- locked <0x00000006c00094c8> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:47)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=31 tid=0x00007f80ba80b800 nid=0x4703 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=31 tid=0x00007f80ba80a800 nid=0x3303 in Object.wait() [0x000070000c02f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006c00056f0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000006c00056f0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=31 tid=0x00007f80ba008800 nid=0x3203 in Object.wait() [0x000070000bf2c000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006c0005920> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000006c0005920> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=31 tid=0x00007f80b600b800 nid=0x2903 in Object.wait() [0x000070000b50e000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006c0006988> (a com.company.FactorialMT$MyThread)
+	at java.lang.Thread.join(Thread.java:1252)
+	- locked <0x00000006c0006988> (a com.company.FactorialMT$MyThread)
+	at java.lang.Thread.join(Thread.java:1326)
+	at com.company.FactorialMT.main(FactorialMT.java:36)
+
+"VM Thread" os_prio=31 tid=0x00007f80b7009800 nid=0x3003 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=31 tid=0x00007f80b6018800 nid=0x2107 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=31 tid=0x00007f80b7008800 nid=0x1f03 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=31 tid=0x00007f80b480c800 nid=0x2b03 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=31 tid=0x00007f80b480d000 nid=0x5303 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=31 tid=0x00007f80b7808800 nid=0x2c03 runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=31 tid=0x00007f80b480e000 nid=0x5103 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=31 tid=0x00007f80b480e800 nid=0x4f03 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=31 tid=0x00007f80b480f800 nid=0x2e03 runnable 
+
+"VM Periodic Task Thread" os_prio=31 tid=0x00007f80b683e800 nid=0x5803 waiting on condition 
+
+JNI global references: 15
+

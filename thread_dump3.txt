@@ -1,0 +1,103 @@
+2021-01-31 18:27:31
+Full thread dump OpenJDK 64-Bit Server VM (25.275-b01 mixed mode):
+
+"Attach Listener" #107 daemon prio=9 os_prio=31 tid=0x00007f80b5833800 nid=0x9a07 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #10 daemon prio=9 os_prio=31 tid=0x00007f80b4867800 nid=0x5603 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread3" #9 daemon prio=9 os_prio=31 tid=0x00007f80b7013000 nid=0x4003 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #8 daemon prio=9 os_prio=31 tid=0x00007f80b7012000 nid=0x4103 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=31 tid=0x00007f80b7011000 nid=0x4303 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=31 tid=0x00007f80b7010000 nid=0x4403 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Ctrl-Break" #5 daemon prio=5 os_prio=31 tid=0x00007f80b7864000 nid=0x4603 runnable [0x000070000c33b000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	- locked <0x00000006c00094c8> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	- locked <0x00000006c00094c8> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:47)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=31 tid=0x00007f80ba80b800 nid=0x4703 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=31 tid=0x00007f80ba80a800 nid=0x3303 in Object.wait() [0x000070000c02f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006c00056f0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000006c00056f0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=31 tid=0x00007f80ba008800 nid=0x3203 in Object.wait() [0x000070000bf2c000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006c0005920> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000006c0005920> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=31 tid=0x00007f80b600b800 nid=0x2903 runnable [0x000070000b50d000]
+   java.lang.Thread.State: RUNNABLE
+	at java.math.BigInteger.multiplyToomCook3(BigInteger.java:1811)
+	at java.math.BigInteger.multiply(BigInteger.java:1589)
+	at java.math.BigInteger.multiplyToomCook3(BigInteger.java:1792)
+	at java.math.BigInteger.multiply(BigInteger.java:1589)
+	at java.math.BigInteger.multiply(BigInteger.java:1493)
+	at java.math.MutableBigInteger.divide3n2n(MutableBigInteger.java:1365)
+	at java.math.MutableBigInteger.divide2n1n(MutableBigInteger.java:1330)
+	at java.math.MutableBigInteger.divide3n2n(MutableBigInteger.java:1362)
+	at java.math.MutableBigInteger.divide2n1n(MutableBigInteger.java:1326)
+	at java.math.MutableBigInteger.divideAndRemainderBurnikelZiegler(MutableBigInteger.java:1293)
+	at java.math.BigInteger.divideAndRemainderBurnikelZiegler(BigInteger.java:2293)
+	at java.math.BigInteger.divideAndRemainder(BigInteger.java:2225)
+	at java.math.BigInteger.toString(BigInteger.java:3900)
+	at java.math.BigInteger.toString(BigInteger.java:3905)
+	at java.math.BigInteger.toString(BigInteger.java:3808)
+	at java.math.BigInteger.toString(BigInteger.java:3959)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:131)
+	at com.company.FactorialMT.main(FactorialMT.java:37)
+
+"VM Thread" os_prio=31 tid=0x00007f80b7009800 nid=0x3003 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=31 tid=0x00007f80b6018800 nid=0x2107 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=31 tid=0x00007f80b7008800 nid=0x1f03 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=31 tid=0x00007f80b480c800 nid=0x2b03 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=31 tid=0x00007f80b480d000 nid=0x5303 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=31 tid=0x00007f80b7808800 nid=0x2c03 runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=31 tid=0x00007f80b480e000 nid=0x5103 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=31 tid=0x00007f80b480e800 nid=0x4f03 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=31 tid=0x00007f80b480f800 nid=0x2e03 runnable 
+
+"VM Periodic Task Thread" os_prio=31 tid=0x00007f80b683e800 nid=0x5803 waiting on condition 
+
+JNI global references: 15
+

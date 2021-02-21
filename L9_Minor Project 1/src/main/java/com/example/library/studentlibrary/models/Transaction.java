@@ -1,6 +1,9 @@
 package com.example.library.studentlibrary.models;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
+import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -10,7 +13,7 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String transactionId = UUID.randomUUID().toString();
+    private String transactionId = UUID.randomUUID().toString(); // externalId
 
     @ManyToOne
     @JoinColumn
@@ -27,6 +30,9 @@ public class Transaction {
 
     @Enumerated(value = EnumType.STRING)
     private TransactionStatus transactionStatus;
+
+    @CreationTimestamp
+    private Date transactionDate;
 
     public String getTransactionId() {
         return transactionId;
@@ -82,6 +88,14 @@ public class Transaction {
 
     public void setCard(Card card) {
         this.card = card;
+    }
+
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
+
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
     }
 }
 

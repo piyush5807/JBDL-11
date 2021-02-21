@@ -11,13 +11,13 @@ public class Author {
     private int id;
     private String name;
 
-    @JoinColumn(unique = true)
+    @Column(unique = true)
     private String email;
+
     private int age;
     private String country;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @ElementCollection
     private List<Book> booksWritten;
 
     public Author() {

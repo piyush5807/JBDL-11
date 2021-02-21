@@ -23,7 +23,6 @@ public class StudentService {
 
     public void createStudent(Student student){
         Card newCard = cardService.createAndReturn(student);
-
         logger.info("The card for the student {} is created with the details - {}", student, newCard);
 
     }

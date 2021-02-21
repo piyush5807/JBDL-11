@@ -1,7 +1,8 @@
 package com.example.library.studentlibrary;
 
-import com.example.library.studentlibrary.models.Card;
-import com.example.library.studentlibrary.models.Student;
+import com.example.library.studentlibrary.models.*;
+import com.example.library.studentlibrary.repositories.AuthorRepository;
+import com.example.library.studentlibrary.repositories.BookRepository;
 import com.example.library.studentlibrary.repositories.CardRepository;
 import com.example.library.studentlibrary.repositories.StudentRepository;
 import com.example.library.studentlibrary.services.StudentService;
@@ -24,6 +25,11 @@ public class StudentLibraryApplication implements CommandLineRunner {
 	@Autowired
 	StudentService studentService;
 
+	@Autowired
+	AuthorRepository authorRepository;
+
+	@Autowired
+	BookRepository bookRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentLibraryApplication.class, args);
@@ -31,16 +37,25 @@ public class StudentLibraryApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Student student = new Student("abc@gmail.com", "ABC", 40, "Slovakia");
+//		Student student = new Student("abc@gmail.com", "ABC", 40, "Slovakia");
+//
+//		Card card = new Card();
+//
+//		student.setCard(card);
+//		card.setStudent(student);
+//
+//		cardRepository.save(card);
 
-		Card card = new Card();
+//		Author author = new Author("William", "william@gmail.com", 45, "Italy");
+//		Book book = new Book("Human Psychology", Genre.FICTIONAL, author);
+//
+//
+//		authorRepository.save(author);
+//
+//		bookRepository.save(book);
 
-		student.setCard(card);
-		card.setStudent(student);
 
-		cardRepository.save(card);
-
-		studentService.deleteStudent(1);
+//		studentService.deleteStudent(1);
 
 //		System.out.println(studentRepository.findStudentByEmailBySQL("abc@gmail.com"));
 //

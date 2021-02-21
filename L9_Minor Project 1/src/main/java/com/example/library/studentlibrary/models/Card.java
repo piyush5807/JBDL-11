@@ -26,6 +26,9 @@ public class Card {
     @Enumerated(value = EnumType.STRING)
     private CardStatus cardStatus;
 
+    @OneToMany(mappedBy = "card", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Book> books;
+
     public Card(){
         this.cardStatus = CardStatus.ACTIVATED;
     }
@@ -70,14 +73,11 @@ public class Card {
         this.cardStatus = cardStatus;
     }
 
-    @Override
-    public String toString() {
-        return "Card{" +
-                "id=" + id +
-                ", student=" + student +
-                ", createdOn=" + createdOn +
-                ", updatedOn=" + updatedOn +
-                ", cardStatus=" + cardStatus +
-                '}';
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }

@@ -28,20 +28,19 @@ public class Book {
 
 
     @Column(columnDefinition = "TINYINT(1)")
-    private boolean isAvailable;
+    private boolean available;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @ElementCollection
     private List<Transaction> transactions;
 
     public Book() {
     }
 
-    public Book(String name, Genre genre, Author author, boolean isAvailable) {
+    public Book(String name, Genre genre, Author author) {
         this.name = name;
         this.genre = genre;
         this.author = author;
-        this.isAvailable = isAvailable;
+        this.available = true;
     }
 
     public int getId() {
@@ -69,11 +68,11 @@ public class Book {
     }
 
     public boolean isAvailable() {
-        return isAvailable;
+        return available;
     }
 
     public void setAvailable(boolean available) {
-        isAvailable = available;
+        this.available = available;
     }
 
     public Card getCard() {
@@ -99,8 +98,6 @@ public class Book {
     public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }
-
-
 
 }
 

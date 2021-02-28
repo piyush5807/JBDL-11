@@ -1,8 +1,0 @@
-com/example/springjpa/demojpa/DemoJpaApplication.class
-com/example/springjpa/demojpa/Controller/UserController.class
-com/example/springjpa/demojpa/Model/Bank.class
-com/example/springjpa/demojpa/Model/UserPrimaryKey.class
-com/example/springjpa/demojpa/Repository/BankRepository.class
-com/example/springjpa/demojpa/Service/UserService.class
-com/example/springjpa/demojpa/Repository/UserRepository.class
-com/example/springjpa/demojpa/Model/User.class

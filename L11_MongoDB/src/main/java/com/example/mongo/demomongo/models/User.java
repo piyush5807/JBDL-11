@@ -15,6 +15,6 @@ public class User {
     private String name;
     private int age;
     private double bmi;
-//    private Address address;
+    private Address address;
 
 }

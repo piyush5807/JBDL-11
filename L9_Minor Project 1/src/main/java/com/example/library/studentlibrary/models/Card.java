@@ -1,5 +1,6 @@
 package com.example.library.studentlibrary.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -15,6 +16,7 @@ public class Card {
     private int id;
 
     @OneToOne(mappedBy = "card", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("card")
     private Student student;
 
     @CreationTimestamp
@@ -27,6 +29,7 @@ public class Card {
     private CardStatus cardStatus;
 
     @OneToMany(mappedBy = "card", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("card")
     private List<Book> books;
 
     public Card(){

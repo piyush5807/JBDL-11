@@ -1,5 +1,6 @@
 package com.example.library.studentlibrary.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -35,6 +36,7 @@ public class Student {
 
     @OneToOne
     @JoinColumn   // join this column to the primary key of Card table
+    @JsonIgnoreProperties("student")
     private Card card;
 
 

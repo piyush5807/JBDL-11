@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class StudentLibraryApplication implements CommandLineRunner {
@@ -37,6 +38,8 @@ public class StudentLibraryApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		List<Book> books = bookRepository.findAll();
 //		Student student = new Student("abc@gmail.com", "ABC", 40, "Slovakia");
 //
 //		Card card = new Card();

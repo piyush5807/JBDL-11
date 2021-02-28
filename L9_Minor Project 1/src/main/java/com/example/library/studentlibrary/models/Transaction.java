@@ -1,5 +1,6 @@
 package com.example.library.studentlibrary.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -17,10 +18,12 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn
+    @JsonIgnoreProperties("books")
     private Card card;
 
     @ManyToOne
     @JoinColumn
+    @JsonIgnoreProperties("transactions")
     private Book book;
 
     private int fineAmount;

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.springjpa.demojpa.DemoJpaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.933 s - in com.example.springjpa.demojpa.DemoJpaApplicationTests

@@ -1,6 +1,8 @@
 package com.example.library.studentlibrary.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -20,10 +22,12 @@ public class Book {
 
     @ManyToOne
     @JoinColumn
+    @JsonIgnoreProperties("booksWritten")
     private Author author;
 
     @ManyToOne
     @JoinColumn
+    @JsonIgnoreProperties("books")
     private Card card;
 
 
@@ -31,6 +35,7 @@ public class Book {
     private boolean available;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("book")
     private List<Transaction> transactions;
 
     public Book() {

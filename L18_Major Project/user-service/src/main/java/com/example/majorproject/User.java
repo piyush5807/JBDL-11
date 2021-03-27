@@ -3,6 +3,7 @@ package com.example.majorproject;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Getter
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @ToString
 @Builder
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +23,5 @@ public class User {
     private String name;
     private int age;
 
-
-    public UserResponse toResponse(){
-        return UserResponse.builder().user(this).build();
-    }
 
 }

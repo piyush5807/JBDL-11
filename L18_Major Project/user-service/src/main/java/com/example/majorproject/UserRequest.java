@@ -4,14 +4,15 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserRequest {
 
     private String userId;
+    private String email;
     private String name;
     private int age;
-    private String email;
+
 }

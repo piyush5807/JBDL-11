@@ -7,6 +7,6 @@ public class UserException extends Exception{
     }
 
     public UserException() {
-        super("Some exception occurred");
+        super("Some exception occurred while getting user details");
     }
 }

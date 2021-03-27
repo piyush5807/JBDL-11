@@ -10,11 +10,9 @@ import javax.transaction.Transactional;
 public interface WalletRepository extends JpaRepository<Wallet, Integer> {
 
     @Modifying
-    @Query("update Wallet w set w.amount = w.amount - :amount where w.userId = :userId")
-    Wallet decrementWallet(String userId, int amount);
+    @Query("update Wallet w set w.balance = w.balance + :amount where w.userId = :userId")
+    void updateWallet(String userId, int amount);
 
-    @Modifying
-    @Query("update Wallet w set w.amount = w.amount + :amount where w.userId = :userId")
-    Wallet incrementWallet(String userId, int amount);
+    Wallet findByUserId(String userId);
 
 }
